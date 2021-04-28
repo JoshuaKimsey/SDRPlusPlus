@@ -12,14 +12,14 @@ else ()
 endif ()
 add_definitions(-DSDRPP_IS_CORE)
 
-# Set the install prefix
-add_compile_definitions(INSTALL_PREFIX="${CMAKE_INSTALL_PREFIX}")
-
 # Main code
 file(GLOB_RECURSE SRC "src/*.cpp" "src/*.c")
 
 # Add code to dyn lib
 add_library(sdrpp_core SHARED ${SRC})
+
+# Set the install prefix
+target_compile_definitions(sdrpp_core PUBLIC INSTALL_PREFIX="${CMAKE_INSTALL_PREFIX}")
 
 # Include core headers
 target_include_directories(sdrpp_core PUBLIC "src/")
@@ -64,13 +64,6 @@ else()
         ${VOLK_INCLUDE_DIRS}
     )
 
-    target_link_directories(sdrpp_core PUBLIC
-        ${GLEW_LIBRARY_DIRS}
-        ${FFTW3_LIBRARY_DIRS}
-        ${GLFW3_LIBRARY_DIRS}
-        ${VOLK_LIBRARY_DIRS}
-    )
-
     target_link_libraries(sdrpp_core PUBLIC
         ${OPENGL_LIBRARIES}
         ${GLEW_LIBRARIES}
@@ -78,8 +71,6 @@ else()
         ${GLFW3_LIBRARIES}
         ${VOLK_LIBRARIES}
     )
-
-    message(${VOLK_LIBRARIES})
 
     if (${CMAKE_SYSTEM_NAME} MATCHES "Linux")
         target_link_libraries(sdrpp_core PUBLIC stdc++fs)

@@ -1,21 +1,21 @@
 {
-    "name": "General",
-    "country_name": "Worldwide",
-    "country_code": "--",
-    "author_name": "Ryzerth",
-    "author_url": "https://github.com/AlexandreRouma",
+    "name": "USA",
+    "country_name": "United States of America",
+    "country_code": "US",
+    "author_name": "Joshua Kimsey",
+    "author_url": "http://jkimsey.tech",
     "bands": [
         {
             "name": "Long Wave",
             "type": "broadcast",
             "start": 148500,
-            "end": 283500
+            "end": 519000
         },
         {
-            "name": "Medium Wave",
+            "name": "Medium Wave (AM Broadcast)",
             "type": "broadcast",
-            "start": 526500,
-            "end": 1606500
+            "start": 525000,
+            "end": 1705000
         },
         {
             "name": "160m Ham Band",
@@ -180,6 +180,18 @@
             "end": 54000000
         },
         {
+            "name": "TV Channels 2-4",
+            "type": "broadcast",
+            "start": 54000000,
+            "end": 72000000
+        },
+        {
+            "name": "TV Channels 5-6",
+            "type": "broadcast",
+            "start": 76000000,
+            "end": 88000000
+        },
+        {
             "name": "FM Broadcast",
             "type": "broadcast",
             "start": 87500000,
@@ -216,6 +228,18 @@
             "end": 162025000
         },
         {
+            "name": "NOAA Weather Radio",
+            "type": "broadcast",
+            "start": 162362500,
+            "end": 162587500
+        },
+        {
+            "name": "TV Channels 7-13",
+            "type": "broadcast",
+            "start": 174000000,
+            "end": 216000000
+        },
+        {
             "name": "1.25m Ham Band",
             "type": "amateur",
             "start": 222000000,
@@ -244,6 +268,24 @@
             "type": "amateur",
             "start": 446000000,
             "end": 446200000
+        },
+        {
+            "name": "TV Channels 14-20",
+            "type": "broadcast",
+            "start": 470000000,
+            "end": 512000000
+        },
+        {
+            "name": "TV Channels 21-36",
+            "type": "broadcast",
+            "start": 512000000,
+            "end": 608000000
+        },
+        {
+            "name": "TV Broadcasting",
+            "type": "broadcast",
+            "start": 614000000,
+            "end": 698000000
         },
         {
             "name": "33cm Ham Band",
